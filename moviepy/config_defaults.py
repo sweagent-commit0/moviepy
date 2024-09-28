@@ -18,7 +18,7 @@ Linux/Mac:
    export FFMPEG_BINARY=path/to/ffmpeg
 
 Windows:
-   set FFMPEG_BINARY=path\to\ffmpeg
+   set FFMPEG_BINARY=path	o\x0cfmpeg
 
 Instructions
 --------------
@@ -34,7 +34,7 @@ FFMPEG_BINARY
     enter it like that:
 
     FFMPEG_BINARY = r"path/to/ffmpeg" # on linux
-    FFMPEG_BINARY = r"path\to\ffmpeg.exe" # on windows
+    FFMPEG_BINARY = r"path	o\x0cfmpeg.exe" # on windows
 
     Warning: the 'r' before the path is important, especially on Windows.
 
@@ -44,11 +44,9 @@ IMAGEMAGICK_BINARY
     For Windows users, you must specify the path to the ImageMagick
     'magick' binary. For instance:
 
-    IMAGEMAGICK_BINARY = r"C:\Program Files\ImageMagick-6.8.8-Q16\magick.exe"
+    IMAGEMAGICK_BINARY = r"C:\\Program Files\\ImageMagick-6.8.8-Q16\\magick.exe"
 
 """
-
 import os
-
 FFMPEG_BINARY = os.getenv('FFMPEG_BINARY', 'ffmpeg-imageio')
 IMAGEMAGICK_BINARY = os.getenv('IMAGEMAGICK_BINARY', 'auto-detect')

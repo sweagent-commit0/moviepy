@@ -1,6 +1,5 @@
 from moviepy.decorators import audio_video_fx
 
-
 @audio_video_fx
 def volumex(clip, factor):
     """ Returns a clip with audio volume multiplied by the
@@ -16,5 +15,4 @@ def volumex(clip, factor):
     >>> newclip = clip.fx( volumex, 0.5) # half audio, use with fx
     >>> newclip = clip.volumex(2) # only if you used "moviepy.editor"
     """
-    return clip.fl(lambda gf, t: factor * gf(t),
-                   keep_duration=True)
+    pass

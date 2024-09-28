@@ -1,7 +1,6 @@
 from moviepy.video.compositing.CompositeVideoClip import CompositeVideoClip
 from moviepy.video.VideoClip import ColorClip
 
-
 def on_color(clip, size=None, color=(0, 0, 0), pos=None, col_opacity=None):
     """ 
     Returns a clip made of the current clip overlaid on a color
@@ -14,14 +13,4 @@ def on_color(clip, size=None, color=(0, 0, 0), pos=None, col_opacity=None):
     :param pos: the position of the clip in the final clip.
     :param col_opacity: should the added zones be transparent ?
     """
-    
-    if size is None:
-        size = clip.size
-    if pos is None:
-        pos = 'center'
-    colorclip = ColorClip(size, color=color)
-    if col_opacity:
-        colorclip = colorclip.with_mask().set_opacity(col_opacity)
-
-    return CompositeVideoClip([colorclip, clip.set_position(pos)],
-                              transparent=(col_opacity is not None))
+    pass

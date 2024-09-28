@@ -1,6 +1,5 @@
 from moviepy.decorators import apply_to_audio, apply_to_mask, requires_duration
 
-
 @requires_duration
 @apply_to_mask
 @apply_to_audio
@@ -18,9 +17,4 @@ def loop(self, n=None, duration=None):
     duration
       Total duration of the clip. Can be specified instead of n.
     """
-    result = self.fl_time(lambda t: t % self.duration)
-    if n:
-        duration = n*self.duration
-    if duration:
-        result = result.set_duration(duration)
-    return result
+    pass
